@@ -1,0 +1,129 @@
+---
+import Container from "../components/Container.astro"
+import Layout from "../layouts/Layout.astro"
+import Team from "../components/Team.astro"
+---
+
+
+<Layout
+  title="About BOSC."
+  description="BOSC's Official Website. Read IT Notes and Blogs. Get Jobs, Opportunities. Join Events and Mentorship Programs. Created by Open Source Enthusiasts from Nepal."
+  image="https://bosc.org.np/team.jpg"
+  url="https://bosc.org.np/about"
+>
+  <main class="space-y-20">
+    <Container>
+      <div
+        class="relative flex flex-col-reverse items-center md:flex-row"
+        id="about_us_hero"
+      >
+        <div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
+          <div class="text-left space-y-3">
+            <h1 class="text-5xl font-medium leading-none md:text-6xl">
+              BOSC" Birendra
+              <br /> Open Source Club <br />
+            </h1>
+            <p class="mt-6 mb-8 text-2xl font-normal leading-7 sm:mb-12">
+              10+ Executives, 20+ Members <br /> 50+ Alumni, 100+ Contributors &
+              1000+ Followers
+              <br />
+              <br />Estd. 2021 A.D.
+            </p>
+          </div>
+          <div class="text-left space-y-3">
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://forms.gle/cyisykxr6RwpXCrm7"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">Join Us</h2>
+            </a>
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/#contact"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                Contact Us
+              </h2>
+            </a>
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs#history"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                History of BOSC
+              </h2>
+            </a>
+          </div>
+
+          <div class="text-left space-y-3">
+            <!-- <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs/code-of-conduct"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                Code of Conduct
+              </h2>
+            </a> -->
+
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs/partnerships"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                Our Partners
+              </h2>
+            </a>
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs/constitution"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                BOSC-Constitution
+              </h2>
+            </a>
+          </div>
+          <div class="text-left space-y-3">
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs#members"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                All Members
+              </h2>
+            </a>
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs#events"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                All Events
+              </h2>
+            </a>
+            <a
+              class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+              rel="noopener noreferrer"
+              href="/blogs#alumni"
+            >
+              <h2 class="text-center text-xl font-normal leading-7">
+                Our Alumni
+              </h2>
+            </a>
+          </div>
+        </div>
+        <div class="flex items py-5 md:w-6/12 md:pb-20 md:pt-10">
+          <img class="rounded-2xl" src="/team1.jpg" width="100%" alt="Hero" />
+        </div>
+      </div>
+    </Container>
+    <Team />
+  </main>
+</Layout>

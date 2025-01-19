@@ -1,0 +1,64 @@
+---
+import Container from "./Container.astro"
+import Topic from "./Topic.astro"
+import teamData from "./Data/team.json"
+import Collapse from "./Collapse.astro"
+import MemberCard from "./Cards/MemberCard.astro"
+---
+
+<Container>
+  <div class="relative flex flex-col items-center md:flex-row pt-6">
+    <Topic
+      title="Team"
+      description="Meet the skilled and experienced executive team for the current tenure."
+    />
+  </div>
+
+  <div class="flex-row items-center py-5" id="team">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
+    >
+      <MemberCard members={teamData.executives} />
+    </div>
+    <div class="w-full justify-center md:justify-end items-center inline-flex">
+      <a
+        class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
+        rel="noopener noreferrer"
+        href="/blogs#members"
+      >
+        <h2 class="text-center text-xl font-normal leading-7">All Members</h2>
+      </a>
+    </div>
+  </div>
+
+  <!-- <div class="w-full justify-center md:justify-end items-center inline-flex">
+    <button
+      class="px-8 py-5 bg-zinc-900 hover:bg-white rounded-2xl text-center text-white hover:text-black border text-xl font-normal leading-7"
+      ><a href="/timeline">Meet the Team</a>
+    </button>
+  </div> -->
+</Container>
+<Container>
+  <div class="relative flex flex-col items-center md:flex-row">
+    <Topic title="FAQs" description="Questions repeatedly asked to BOSC." />
+  </div>
+
+  <!-- Adjust the grid layout and size of FAQ boxes -->
+  <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    {
+      teamData.faqs.map((faq, key) => (
+        <Collapse key={key} label={faq.question} index={key + 1}>
+          {faq.answer}
+        </Collapse>
+      ))
+    }
+  </div>
+</Container>
+
+<!-- Tailwind Custom Scrollbar CSS -->
+<style>
+  /* Custom thin scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 3px; /* Width of the scrollbar */
+  }
+</style>

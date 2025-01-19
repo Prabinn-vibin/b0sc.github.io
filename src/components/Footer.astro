@@ -1,0 +1,55 @@
+---
+import Container from "./Container.astro"
+const date = new Date().getFullYear()
+---
+
+<footer class="bg-lime bg-fixed bg-bottom text-black">
+  <Container>
+    <div class="py-6">
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img class="w-auto h-8" src="/logo.png" alt="Logo" />-B-O-S-C
+        </div>
+        <div class="flex justify-center items-center mt-4 md:m-0">
+          <a href="https://t.me/bosc_official" target="_blank">
+            <img class="h-10" src="/telegram.png" alt="telegram logo" />
+          </a>
+          <a href="https://github.com/b0sc" target="_blank">
+            <img src="/github.png" alt="github logo" />
+          </a>
+          <a href="https://facebook.com/birendraopensourceclub" target="_blank">
+            <img src="/facebook.png" alt="facebook logo" />
+          </a>
+          <a href="https://www.linkedin.com/company/b0sc/" target="_blank">
+            <img src="/linkedin.png" alt="linkedin logo" />
+          </a>
+
+          <a
+            href="https://instagram.com/birendraopensourceclub"
+            target="_blank"
+          >
+            <img src="/instagram.png" alt="instagram logo" />
+          </a>
+
+          <a href="https://discord.gg/3gjuqt64y8" target="_blank">
+            <img
+              class="h-10 rounded-xl"
+              src="/discord.png"
+              alt="discord logo"
+            />
+          </a>
+        </div>
+        <div class="flex mt-4 md:m-0">
+          <div class="-mx-4">
+            <a
+              href="https://github.com/b0sc/b0sc.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              >bosc@{date}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</footer>

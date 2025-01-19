@@ -1,0 +1,263 @@
+---
+import Container from "./Container.astro"
+import ArticleIcon from "./Icons/ArticleIcon.astro"
+import Topic from "./Topic.astro"
+
+const isProd = import.meta.env.PROD
+const isDev = import.meta.env.DEV
+
+let user_url = "http://localhost:8787/user"
+if (isProd) {
+  user_url = "https://api.bosc.org.np/user"
+} else if (isDev) {
+  user_url = "http://localhost:8787/user"
+} else {
+  user_url = "https://api.bosc.org.np/user"
+}
+---
+
+<Container>
+  <div class="relative flex flex-col items-center md:flex-row" id="contact">
+    <Topic
+      title="Contact"
+      description="Feature your Blog -- Partner with us -- Or just say Hi -- You can also mail us at mail@bosc.org.np directly."
+    />
+  </div>
+
+  <div
+    class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 rounded-[45px]"
+  >
+    <div class="row items-center py-12 px-4 md:px-20 md:w-8/12 md:py-10">
+      <form class="space-y-4 md:w-full" id="cn-form">
+        <div>
+          <span
+            class="bg-lime text-black text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded"
+          >
+            <ArticleIcon />
+            <strong>NEWSLETTER - Launched 💬</strong>
+          </span>
+          <br />
+          <strong>Subscribe </strong> to get updates of our <strong>
+            future events</strong
+          > and workshops.
+        </div>
+        <div>
+          <label for="name" class="block mb-2 text-base font-medium text-black"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="cn-name"
+            name="name"
+            class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+        <div>
+          <label for="email" class="block mb-2 text-base font-medium text-black"
+            >Email</label
+          >
+          <div
+            class="relative flex flex-col items-center justify-between md:flex-row bg-zinc-100 rounded-[45px]"
+          >
+            <input
+              type="email"
+              id="cn-email"
+              name="email"
+              class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black"
+              placeholder="john.doe@gmail.com"
+              required
+            />
+            <button
+              id="cn-subs-btn"
+              type="submit"
+              class="px-4 py-3 m-2 text-white bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex hover:bg-zinc-100 hover:text-black border"
+            >
+              <span class="text-center text-xl font-normal leading-7">
+                Subscribe
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="message"
+            class="block mb-2 text-base font-medium text-black dark:text-gray-400"
+            >Message</label
+          >
+          <textarea
+            id="cn-msg"
+            name="message"
+            rows="6"
+            class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black"
+            placeholder="I really like what BOSC is doing! Keep it up."
+          ></textarea>
+        </div>
+        <button
+          id="cn-msg-btn"
+          type="submit"
+          class="w-full text-white py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex hover:text-black hover:bg-zinc-100 border"
+        >
+          <div class="text-center text-xl font-normal leading-7">
+            Send Message
+          </div>
+        </button>
+        <input
+          id="cn-next"
+          type="hidden"
+          name="_next"
+          value="https://bosc.org.np"
+        />
+        <input id="cn-template" type="hidden" name="_template" value="box" />
+        <input id="cn-captcha" type="hidden" name="_captcha" value="true" />
+      </form>
+      <span id="hey111" data-msg={user_url}></span>
+      <script>
+        import {
+          NotifySuccess,
+          NotifyError,
+          NotifyMessage,
+        } from "../utils/notify"
+
+        function handleSubscribe(data: FormData, subscriptionOnly: boolean) {
+          // Remove fields except name and email
+          data.delete("message")
+          data.delete("_next")
+          data.delete("_template")
+          data.delete("_captcha")
+          data.append("username", data.get("name") || "")
+          data.delete("name")
+
+          const object = Object.fromEntries(data)
+          const json = JSON.stringify(object)
+          // console.log(json)
+
+          let toast: NotifyMessage
+          if (subscriptionOnly) {
+            toast = new NotifyMessage("Subscribing...", -1)
+            toast.show()
+          }
+          let user_url_test = document.getElementById(
+            "hey111"
+          ) as HTMLSpanElement
+          let user_url = user_url_test.dataset.msg as string
+          fetch(user_url, {
+            method: "POST",
+            body: json,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // referrerPolicy: "same-origin",
+            // mode: "cors",
+          })
+            .then((response) => {
+              console.log("Subscription status:", response.statusText)
+              if (subscriptionOnly) {
+                if (response.status === 200) {
+                  toast.hide()
+                  NotifySuccess("Successfully subscribed! 🎉")
+                }
+                // if (response.redirected) {
+                //   window.location.href = response.url
+                // }
+              }
+            })
+            .catch((error) => {
+              if (toast) {
+                toast.hide()
+              }
+              if (error.name === "TypeError") {
+                // if the error is due to CORS
+                NotifySuccess(
+                  "Partially Subscribed. We will get back to you soon."
+                )
+              } else {
+                NotifyError("Unable to subscribe. Still Under Development.")
+              }
+              console.error("Error during subscription:", error)
+            })
+        }
+
+        function handleMessage(data: string) {
+          // formsubmit is free thus is very slow and unreliable reponse is given regarding cors -- [idk] submissions per month
+          // https://web3forms.com/ and https://formspark.io/ are better alternatives with -- 250 submissions per month
+          const msg = new NotifyMessage(
+            "Sending... Feel free to browse the website.",
+            -1
+          )
+          msg.show()
+          fetch("https://formsubmit.co/ajax/8c368e944b0e888ffcb863838e3fbc00", {
+            method: "POST",
+            body: data,
+            // mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+              // Accept: "application/json",
+            },
+            // referrerPolicy: "origin-when-cross-origin",
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.json()
+              } else {
+                console.log("Failed to send message. response:", response)
+              }
+            })
+            .then((data) => {
+              console.log("Message Success Response:", data)
+              if (data.success) {
+                msg.hide()
+                NotifySuccess("Message sent successfully!")
+              }
+            })
+            .catch((error) => {
+              msg.hide()
+              if (
+                error.message === "Failed to fetch" &&
+                error.name === "TypeError"
+              ) {
+                // if the error is due to CORS
+                NotifySuccess(
+                  "Message partially sent. We will get back to you soon."
+                )
+              } else {
+                NotifyError("Failed to send message. Still Under Development.")
+              }
+            })
+        }
+
+        document.getElementById("cn-form")?.addEventListener("submit", (e) => {
+          e.preventDefault()
+          const form = document.getElementById("cn-form") as HTMLFormElement
+          const formData = new FormData(form)
+          const obj = Object.fromEntries(formData)
+          const json = JSON.stringify(obj)
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+          const subscriptionOnly = obj.message === ""
+          if (
+            obj.name === "" ||
+            obj.email === "" ||
+            !emailRegex.test(obj.email?.toString())
+          ) {
+            NotifyError("Common! Fill the form correctly.")
+            return
+          }
+          handleSubscribe(formData, subscriptionOnly)
+          if (!subscriptionOnly) {
+            handleMessage(json)
+          }
+
+          // reset state
+          form.reset()
+          const currentUrl = window.location.href
+          const baseUrl = currentUrl.split("?")[0]
+          window.history.replaceState({}, "", baseUrl)
+        })
+      </script>
+    </div>
+    <div class="hidden md:grid md:justify-items-end md:w-4/12 md:py-2">
+      <img src="./clients/contact.svg" alt="c" width="80%" />
+    </div>
+  </div>
+</Container>

@@ -1,0 +1,205 @@
+{
+  "executives": [
+    {
+      "title": "President",
+      "name": "Achyut Koirala",
+      "description": "2+ Years of Experience in Backend Development. Proficient in Go and Node.js. Open Source Contributor and API Penetration Tester.",
+      "profile": "/team/tenure-2025/achyut-president.jpeg",
+      "link": "https://achyutkoirala.com.np"
+    },
+    {
+      "title": "Vice-President",
+      "name": "Shriram Lamichhane",
+      "description": "2+ Years of Experience as Android Developer. Proficient in Java and Kotlin. Open Source Enthusiast. Cyber Security Enthusiast and Freelancer.",
+      "profile": "/team/tenure-2025/shriram-vp.jpg",
+      "link": "https://www.youtube.com/thesrzone"
+    },
+    {
+      "title": "Secretary",
+      "name": "L.F. Pemi Magar",
+      "description": "2+ years of experience in Graphics Designing, UI/UX and content creation. Proficient in Photoshop, Canva, Figma, keyword research and on-page optimization",
+      "profile": "/team/tenure-2025/lf-gh.png",
+      "link": "https://lfmgr.github.io/Portfolio/"
+    },
+    {
+      "title": "Joint-Secretary",
+      "name": "Jasmine Bhagat",
+      "description": "1+ Year of Experience in Cyber Security. Frontend Developer. Actively Practice Cyber Security. Skilled in Leadership and Management.",
+      "profile": "/team/tenure-2025/jasmine-js.png",
+      "link": "https://www.facebook.com/jasmine.bhagat.733"
+    },
+    {
+      "title": "Treasurer",
+      "name": "Roshani Sharma",
+      "description": "1+ year of Experience in digital marketing and content creation. Proficient in social media management and community building",
+      "profile": "/team/tenure-2025/roshani-treasurer.png",
+      "link": "https://www.linkedin.com/in/roshani-sharma-634217282/"
+    },
+    {
+      "title": "Web Engineer",
+      "name": "Bijesh Ghimire",
+      "description": "Frontend Developer. Proficient in React and Vue. Open Source Enthusiast. Skilled in Bash Scripting, Automation and CI/CD and Linux Administration and Network Hardening.",
+      "profile": "/team/prof.png",
+      "link": "https://github.com/BIIJESH"
+    },
+    {
+      "title": "Graphics Handler",
+      "name": "Yogesh Sunar",
+      "description": "1+ years of experience in Graphics Designing, UI/UX and content creation. Proficient in Photoshop, Canva, Figma, keyword research and on-page optimization",
+      "profile": "/team/tenure-2025/yogesh-gh.jpg",
+      "link": "https://www.facebook.com/yogesh.sunar.507"
+    },
+    {
+      "title": "Social Media Handler",
+      "name": "Yasika Shrestha",
+      "description": "2+ years of experience in content creation and Social Media Handling. Proficient in keyword research and on-page optimization",
+      "profile": "/team/tenure-2025/yasika-cm.jpg",
+      "link": "https://www.facebook.com/yasika.shrestha.96"
+    },
+    {
+      "title": "Social Media Handler",
+      "name": "Bimal Rana Magar",
+      "description": "1+ years of experience in content creation and Social Media Handling. Proficient in keyword research and on-page optimization",
+      "profile": "/team/tenure-2025/bimal-cm.png",
+      "link": "https://www.facebook.com/bimal.ranamagar.161"
+    },
+    {
+      "title": "Outreach Manager",
+      "name": "Sandhya Bhattarai",
+      "description": "Frontend Developer. Proficient in React and Vue. Open Source Enthusiast. A strong communicator with leadership experience and skilled in teamwork ",
+      "profile": "/team/tenure-2025/sandhya-om.jpg",
+      "link": "/www.linkedin.com/in/sandhya-bhattarai"
+    },
+    {
+      "title": "Executive",
+      "name": "Smarika Bhatta",
+      "description": "Frontend Developer. Proficient in React and Vue. Open Source Enthusiast. Skilled in Leadership and Management.",
+      "profile": "/team/tenure-2025/smarika-secretary.jpg",
+      "link": "https://www.facebook.com/smarika.bhatta.925"
+    }
+  ],
+  "members": [
+    {
+      "title": "General Member",
+      "name": "Nirajan Subedi",
+      "description": "Tech Enthusiast. Skilled in Machine Learning and AI. Passionate Educator and Team Leader. Hackathon Innovator. Proficient in Git, Python, and Project Management.",
+      "profile": "/team/tenure-2025/Nirajan.png",
+      "link": "https://www.linkedin.com/in/nirajan-subedi-141ba4281/"
+    },
+    {
+      "title": "General Member",
+      "name": "Aditya poudel",
+      "description": "Passionate in learning new technologies.",
+      "profile": "/team/tenure-2025/aditya_p.jpg",
+      "link": "https://www.linkedin.com/in/aditya-poudel-0b653733a/"
+    },
+    {
+      "title": "General Member",
+      "name": "Prabin Kunwar",
+      "description": "A tech enthusiast passionate about innovation, system optimization, and merging cultural heritage with modern solutions.",
+      "profile": "/team/tenure-2025/Prabinkunwar.jpg",
+      "link": "https://www.linkedin.com/in/prabin-kunwar-88250b33b/"
+    },
+    {
+      "title": "General Member",
+      "name": "Hero Person",
+      "description": "Starting out fresh in the field of technology. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "General Member",
+      "name": "Hero Person",
+      "description": "Starting out fresh in the field of technology. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "General Member",
+      "name": "Hero Person",
+      "description": "Starting out fresh in the field of technology. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "General Member",
+      "name": "Hero Person",
+      "description": "Starting out fresh in the field of technology. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    }
+  ],
+  "alumni": [
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    },
+    {
+      "title": "President | 2023-2024",
+      "name": "Kushal Pathak",
+      "description": "2+ Years of Experience in Software Development. Proficient in React and Node.js. Open Source Contributor. Interested in learning new things and exploring new opportunities.",
+      "profile": "/team/prof.png",
+      "link": "https://facebook.com/birendraopensourceclub"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Who can Join the Club? Is there any eligibility criteria, or any membership fee?",
+      "answer": "Anyone studying in Birendra Multiple Campus can join the club. We welcome students from all backgrounds and levels of experience. There is no membership fee to join the club."
+    },
+    {
+      "question": "Is BOSC affiliated with any other organizations?",
+      "answer": "No, but we must work under the Rules and Regulations established by Birendra Multiple Campus, since we are a student club registered under the college."
+    },
+    {
+      "question": "Will BOSC Collaborate with other clubs?",
+      "answer": "Yes, we are open to collaborating with other clubs and organizations. We believe that working together will help us achieve our goals more effectively."
+    },
+    {
+      "question": "How can I contribute to BOSC?",
+      "answer": "You can contribute to BOSC by participating in our events, workshops, and training sessions. You can also volunteer to help us organize events, or share your knowledge and expertise with other members."
+    },
+    {
+      "question": "What is Open Source?",
+      "answer": "Open Source refers to software that is freely available to use, modify, and distribute. Open Source software is developed by a community of developers who collaborate to improve the software and make it available to everyone."
+    }
+  ]
+}

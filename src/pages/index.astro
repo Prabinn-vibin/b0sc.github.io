@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Hero from "../components/Hero.astro"
+import TopEvents from "../components/TopEvent.astro"
+import Contact from "../components/Contact.astro"
+import Project from "../components/Project.astro"
+import FeaturedBlog from "../components/FeaturedBlog.astro"
+---
+
+<Layout
+  title="BOSC - HOME"
+  description="BOSC's Official Website. Read IT Notes and Blogs. Get Jobs, Opportunities. Join Events and Mentorship Programs. Created by Open Source Enthusiasts from Nepal."
+  image="https://bosc.org.np/team.jpg"
+  url="https://bosc.org.np/"
+>
+  <main class="space-y-20">
+    <Hero />
+    <TopEvents />
+    <Project />
+    <FeaturedBlog />
+    <Contact />
+  </main>
+</Layout>
